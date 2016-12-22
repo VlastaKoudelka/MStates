@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Thu Nov 10 10:33:02 2016
+
+@author: vlastimilo
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Thu Nov  3 10:26:40 2016
 Mean-shift
 @author: vlastimilo
@@ -24,22 +31,28 @@ GFP_obj = cluster.MeanShift(bandwidth=GFP_mean_dist, seeds=None, bin_seeding=Fal
 GFP_labels = GFP_obj.fit_predict(GFP_data)
 print "A number of clusters:" + str(np.max(GFP_labels))
 
-gauss_kernels = np.divide(GFP_mean_dist,np.linspace(1,6,20))
+neighborhood = np.divide(GFP_mean_dist,np.linspace(1,6,20))
 
-GFP_n_clust = gauss_kernels
-for i,width in enumerate(gauss_kernels):
-    print i
-    MeanShift_obj = cluster.MeanShift(bandwidth=width, seeds=None, bin_seeding=False, min_bin_freq=1, cluster_all=True, n_jobs=1)
-    MeanShift_labels = MeanShift_obj.fit_predict(GFP_data)   
-    
-    GFP_n_clust[i] = np.max(MeanShift_labels)
 
-    
+GFP_n_clust = np.zeros((7,len(neighborhood)))
 plt.figure
-plt.plot(np.linspace(1,6,20),GFP_n_clust)
-plt.xlabel('mean distance division')
+for j,min_sapl in enumerate(np.arange(7)+3):  
+    for i,width in enumerate(neighborhood):
+        print i
+        
+        dbscan_obj = cluster.DBSCAN(eps=width, min_samples=min_sapl)    
+        dbscan_labels = dbscan_obj.fit_predict(GFP_data)
+        
+        GFP_n_clust[j,i] = np.max(dbscan_labels)
+    
+    plt.plot(np.linspace(1,6,20),GFP_n_clust[j],label = 'no_of_neighbors: '+ str(min_sapl))
+
+
+
+plt.xlabel('mean distance division (distance in one neighborhood)')
 plt.ylabel('no. of clusters estimate')
-plt.title('MeanShift algorithm cluster estimation')
+plt.title('DBSCAN algorithm cluster estimation')
+plt.legend()
 
 f_name = 'dbscan_no_clst.jpeg'
 plt.savefig(f_name, dpi=300, facecolor='w', edgecolor='w',
