@@ -25,5 +25,25 @@ The t-SNE maps all data samples from Ns=19 dimmensions to 2D space. It is partic
 53% | 62% | 70%
 :--:|:--:|:--:
 ![Pca](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pca.jpg) | ![Varimax](https://github.com/VlastaKoudelka/MStates/blob/master/Results/varimax.jpg) | ![Pascual](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual.jpg)
+####PCA microstate spatial covariance matrix:
 
+     1.0000    0.0000   -0.0000   -0.0000
+     0.0000    1.0000    0.0000   -0.0000
+    -0.0000    0.0000    1.0000   -0.0000
+    -0.0000   -0.0000   -0.0000    1.0000
 
+####Varimax microstate spatial covariance matrix:
+
+     1.0000    0.2296   -0.4951   -0.4374
+     0.2296    1.0000   -0.0190   -0.5923
+    -0.4951   -0.0190    1.0000    0.4977
+    -0.4374   -0.5923    0.4977    1.0000   
+
+Notice that neither PCA nor Varimax microstates are the orthogonal components. In this case, the microstates are projections of the time serie to the components. That is the reason why Varimax microstates are not nescessary orthogonal (they are more similar to P.M. MSs). 
+
+####P.M. microstate spatial covariance matrix:
+    
+    1.0000    0.6895    0.5412    0.0263
+    0.6895    1.0000    0.7157   -0.5854
+    0.5412    0.7157    1.0000   -0.0007
+    0.0263   -0.5854   -0.0007    1.0000
