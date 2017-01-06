@@ -21,16 +21,12 @@ Meanshift algorithm is mainly sensitive to its **bandwidth** hyperparameter, whi
 
 ###3) Stochastic Neighbour Embedding
 
-![lowperplexity](https://github.com/VlastaKoudelka/MStates/blob/master/Results/t-SNE%20GFP_peaks_perp_5.jpeg)
-
-![highperplexity](https://github.com/VlastaKoudelka/MStates/blob/master/Results/t-SNE%20GFP_peaks_perplexity30.jpeg)
+![lowperplexity](https://github.com/VlastaKoudelka/MStates/blob/master/Results/t-SNE%20GFP_peaks_perp_5.jpeg) ![highperplexity](https://github.com/VlastaKoudelka/MStates/blob/master/Results/t-SNE%20GFP_peaks_perplexity30.jpeg)
 
 The t-SNE maps all data samples from Ns=19 dimmensions to 2D space. It is particulary sensitive to perplexity parameter, which has the meaning of nuber of effective neighbours.
 
 ##PCA, Varimax, and P. M. methods:
 
-![Pca](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pca.jpg)
-![Varimax](https://github.com/VlastaKoudelka/MStates/blob/master/Results/varimax.jpg)
-![Pascual](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual.jpg)
+![Pca](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pca.jpg) ![Varimax](https://github.com/VlastaKoudelka/MStates/blob/master/Results/varimax.jpg) ![Pascual](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual.jpg)
 
 
