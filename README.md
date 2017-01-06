@@ -1,6 +1,6 @@
 # MStates
 
-Contains experimental some coded for evaluating microstates hypothesis.
+Contains experimental some codes for evaluating microstates hypothesis.
 
 ##Learning techniques
 
