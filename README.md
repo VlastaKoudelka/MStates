@@ -39,7 +39,7 @@ The t-SNE maps all data samples from Ns=19 dimmensions to 2D space. It is partic
     -0.4951   -0.0190    1.0000    0.4977
     -0.4374   -0.5923    0.4977    1.0000   
 
-Notice that neither PCA nor Varimax microstates are the orthogonal components. In this case, the microstates are projections of the time serie to the components. That is the reason why Varimax microstates are not nescessary orthogonal (they are more similar to P.M. MSs). 
+Notice that neither PCA nor Varimax microstates are the orthogonal components. In this case, the microstates are projections of the time series to the components. That is the reason why Varimax microstates are not nescessary orthogonal (they are more similar to P.M. MSs from this point of view). 
 
 ####P.M. microstate spatial covariance matrix:
     
