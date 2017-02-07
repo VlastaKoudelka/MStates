@@ -55,7 +55,7 @@ constr. 54.3% relaxed 88.3% |constr. 58.8% relaxed 88.3%
 
 constr. 68.7% relaxed 86.2% |constr. NA relaxed NA
 :--:|:--:
-![Pascual2](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual_raw.jpg)|![lor](https://github.com/VlastaKoudelka/MStates/blob/master/Results/LOR.bmp)
+![Pascual2](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual_raw.jpg)|![lor](https://github.com/VlastaKoudelka/MStates/blob/master/Results/LOR.jpg)
 
 
 
