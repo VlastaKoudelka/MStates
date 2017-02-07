@@ -2,9 +2,10 @@
 
 close all
 clear all
-path = 'D:\MicroStates\MS_data\';
-filename = 'BAP-Brisova-avg-19ele-GFPpeaks.txt';
-
+% path = 'D:\MicroStates\MS_data\';
+path = 'D:\MicroStates\KubaK\pla008\';
+% filename = 'BAP-Brisova-avg-19ele-GFPpeaks.txt';
+filename = 'PLA_008_EEG_B_r01604-20150223-121157_Edit Channels 2.DAT';
 M = dlmread([path,filename],' ');
 
 Ns = 19;
