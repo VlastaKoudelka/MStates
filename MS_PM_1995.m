@@ -56,11 +56,26 @@ while abs(sig0 - sigu) > eps*sigu %step 6)
     end
     i = i+1;
 end
+%% Relaxed solution
+for i = 1:Nt
+    c(i,:) = inv(MS'*MS)*MS'*M(i,:)';   %least square fit
+end
+
+aprox_MS_relaxed = c*MS';
+
 %% Explained variance
 
 %variance of data
 var_data = trace(M*M')/(Nt*(Ns-1));
-expl = (1 - conv/var_data)*100;
+
+%residual variance or relaxed model
+res_var_pca_relaxed = trace((M - aprox_MS_relaxed)*(M - aprox_MS_relaxed)')/(Nt*(Ns-1));
+
+
+%explained by restricted and relaxed models
+expl_restrict = (1 - conv/var_data)*100;
+expl_relaxed = (1 - res_var_pca_relaxed/var_data)*100;
+
 %% Visualize
 figure(1)
 suptitle('P.M. Microstates') %visualize topomaps
@@ -70,10 +85,11 @@ for i = 1:size(MS,2)
 end
 
 figure(2)
-plot(expl)
+plot(expl_restrict)
 title('Explained variance over iteration')
 xlabel('Iteration')
 ylabel('Eplained variance [%]')
 
-disp(['explained variance by PM model: ',num2str(expl(end))]);
+disp(['explained variance by PM model: ',num2str(expl_restrict(end))]);
+disp(['explained variance by relaxed PM model: ',num2str(expl_relaxed)]);
     
