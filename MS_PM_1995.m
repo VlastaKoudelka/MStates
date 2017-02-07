@@ -45,6 +45,7 @@ while abs(sig0 - sigu) > eps*sigu %step 6)
     MS_aprox = labels*MS';
     sigu = trace(M*M' - (MS_aprox*M').^2)/(Nt*(Ns-1));   
     conv(i) = sigu;
+    
     %step 3)
     dist = (M*MS).^2;
     for t = 1:Nt
@@ -65,7 +66,7 @@ figure(1)
 suptitle('P.M. Microstates') %visualize topomaps
 for i = 1:size(MS,2)
     subplot(2,2,i)
-    topoplot(MS(:,i),'10-20-microst.loc','gridscale',150);
+    topoplot(MS(:,i),'10-20-microst.loc','gridscale',150,'verbose','off');
 end
 
 figure(2)
@@ -74,4 +75,5 @@ title('Explained variance over iteration')
 xlabel('Iteration')
 ylabel('Eplained variance [%]')
 
+disp(['explained variance by PM model: ',num2str(expl(end))]);
     

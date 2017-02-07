@@ -82,28 +82,28 @@ figure
 suptitle('Varimax Microstates - spatial') %visualize topomaps
 for i = 1:size(MS_varmax,2)
     subplot(2,2,i)
-    topoplot(MS_varmax(:,i),'10-20-microst.loc','gridscale',150);
+    topoplot(MS_varmax(:,i),'10-20-microst.loc','gridscale',150,'verbose','off');
 end
 
 figure
 suptitle('PCA Microstates - spatial') %visualize topomaps
 for i = 1:size(MS_varmax,2)
     subplot(2,2,i)
-    topoplot(MS_pca(:,i),'10-20-microst.loc','gridscale',150);
+    topoplot(MS_pca(:,i),'10-20-microst.loc','gridscale',150,'verbose','off');
 end
 
 figure
 suptitle('Varimax Microstates - temporal') %visualize topomaps
 for i = 1:size(MS_PM_varimax,2)
     subplot(2,2,i)
-    topoplot(MS_PM_varimax(:,i),'10-20-microst.loc','gridscale',150);
+    topoplot(MS_PM_varimax(:,i),'10-20-microst.loc','gridscale',150,'verbose','off');
 end
 
 figure
 suptitle('PCA Microstates - temporal') %visualize topomaps
 for i = 1:size(MS_PM_pca,2)
     subplot(2,2,i)
-    topoplot(MS_PM_pca(:,i),'10-20-microst.loc','gridscale',150);
+    topoplot(MS_PM_pca(:,i),'10-20-microst.loc','gridscale',150,'verbose','off');
 end
 %% Additional visualization
 
