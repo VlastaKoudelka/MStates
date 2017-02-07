@@ -21,7 +21,7 @@ The t-SNE maps all data samples from Ns=19 dimmensions to 2D space. It is partic
 
 ##PCA, Varimax, and P. M. methods
 
-###1) Spatial component analysis and P.M. algorithm comparison and explained variance
+###1) Spatial component analysis and P.M. algorithm comparison (GFP peaks Nikola)
 constr. 53% relaxed 88.5% |constr. 62% relaxed 88.5% | constr. 70% relaxed 86.7%
 :--:|:--:|:--:
 ![Pca](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pca.jpg) | ![Varimax](https://github.com/VlastaKoudelka/MStates/blob/master/Results/varimax.jpg) | ![Pascual](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual.jpg)
@@ -47,3 +47,9 @@ Notice that neither P.M. nor Varimax microstates are the orthogonal components. 
     0.6895    1.0000    0.7157   -0.5854
     0.5412    0.7157    1.0000   -0.0007
     0.0263   -0.5854   -0.0007    1.0000
+
+###1) Spatial component analysis and P.M. algorithm comparison (RAW data Jakub)
+constr. 54.3% relaxed 88.3% |constr. 58.8% relaxed 88.3% 
+:--:|:--:
+![Pca2]()
+
