@@ -51,5 +51,11 @@ Notice that neither P.M. nor Varimax microstates are the orthogonal components. 
 ###1) Spatial component analysis and P.M. algorithm comparison (RAW data Jakub)
 constr. 54.3% relaxed 88.3% |constr. 58.8% relaxed 88.3% 
 :--:|:--:
-![Pca2]()
+![Pca2](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pca_raw.jpg)|![Varimax2](https://github.com/VlastaKoudelka/MStates/blob/master/Results/varimax_raw.jpg)
+
+constr. 54.3% relaxed 88.3% |constr. 58.8% relaxed 88.3% 
+:--:|:--:
+![Pascual2](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual_raw.jpg)|![lor](https://github.com/VlastaKoudelka/MStates/blob/master/Results/LOR.bmp)
+
+
 
