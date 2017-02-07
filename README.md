@@ -21,8 +21,8 @@ The t-SNE maps all data samples from Ns=19 dimmensions to 2D space. It is partic
 
 ##PCA, Varimax, and P. M. methods
 
-###1) Spatial component analysis and P.M. algorithm comparison (eplained variance)
-53% | 62% | 70%
+###1) Spatial component analysis and P.M. algorithm comparison (explained variance constrained/relaxed)
+53%/88.5% | 62%/88.5% | 70%/NA
 :--:|:--:|:--:
 ![Pca](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pca.jpg) | ![Varimax](https://github.com/VlastaKoudelka/MStates/blob/master/Results/varimax.jpg) | ![Pascual](https://github.com/VlastaKoudelka/MStates/blob/master/Results/pascual.jpg)
 ####PCA microstate spatial covariance matrix:
