@@ -14,11 +14,20 @@ Nu = 4;
 Nt = size(M,1);
 sig0 = 0;
 sigu = 1; %an initial value of residual MS model variance
-eps = 1e-6;
+eps = 1e-8;
 M = M(:,1:Ns);
 Nt = size(M,1);
 H = eye(Ns) - ones(Ns)/Ns;  %linear average reference transformation mat.
 M = (M * H);               %average reference and transpose
+
+% find GFP peaks
+for i = 1:size(M,1)
+    GFP(i) = sqrt(sum((M(i,:)-mean(M(i,:))).^2)/Ns);
+end
+
+[pks, locs] = findpeaks(GFP);
+M = M(locs,:);
+Nt = size(M,1);
 
 %Generate initial labels step 2b) in P.M. 1995
 labels = (rand(Nt,Nu));
@@ -28,6 +37,8 @@ for t = 1:Nt
     labels(t,:)=ceil(vec);
 end
 i = 1;
+
+%% Main loop
 while abs(sig0 - sigu) > eps*sigu %step 6)
     sig0 = sigu;
     

@@ -1,6 +1,6 @@
 %% PCA vs. varimax microstates
 
-close all
+% close all
 clear all
 % path = 'D:\MicroStates\MS_data\';
 path = 'D:\MicroStates\KubaK\pla008\';
@@ -13,6 +13,14 @@ M = M(:,1:Ns);
 Nt = size(M,1);
 H = eye(Ns) - ones(Ns)/Ns;  %linear average reference transformation mat.
 M = (M * H)';               %average reference and transpose
+
+%% find GFP peaks
+for i = 1:size(M,2)
+    GFP(i) = sqrt(sum((M(:,i)-mean(M(:,i))).^2)/Ns);
+end
+
+[pks, locs] = findpeaks(GFP);
+M = M(:,locs);
 
 %% Relaxed clusturing approach - spatial
 M_pca_components = pca(M);       %initial factors from PCA
